@@ -1,64 +1,54 @@
-Registro de Asistencia
+# 📋 Registro de Asistencia
 
-Programa de consola en Python para llevar el control de asistencia de personas (por ejemplo, en una clase, reunión o evento).
+## 📌 Descripción
 
-Descripción
+Este proyecto es un programa de **registro de asistencia** desarrollado en Python.
 
-El sistema permite registrar el nombre y estado de asistencia (presente/ausente) de cada persona, y luego consultar quiénes asistieron, quiénes no, o buscar a alguien en particular. Los datos se guardan automáticamente en un archivo asistencia.csv, así que no se pierden al cerrar el programa.
+El programa permite registrar personas indicando si están presentes o ausentes. También permite consultar los asistentes, consultar los ausentes, buscar una persona, eliminar una persona y conocer el total de personas registradas.
 
-Funcionalidades
+El proyecto utiliza funciones, listas, condicionales, ciclos `for` y `while`, además de `return` para organizar mejor el código.
 
-El programa presenta un menú interactivo con las siguientes opciones:
+---
 
-Marcar asistencia: solicita el nombre y si está presente (si/no, con validación de la respuesta). Si el nombre ya existe, ofrece actualizar su estado en vez de duplicarlo.
-Ver asistentes: muestra los nombres de todas las personas marcadas como presentes y el total.
-Ver ausentes: muestra los nombres de todas las personas marcadas como ausentes y el total.
-Buscar persona: busca por nombre (sin distinguir mayúsculas/minúsculas) y muestra su estado de asistencia.
-Ver resumen: muestra el total de registrados, presentes y ausentes.
-Salir: finaliza el programa.
-Requisitos
-Python 3.x
-No requiere librerías externas
-Cómo ejecutarlo
-bash
-python asistencia.py
+## 🎯 Objetivo
 
-(Reemplaza asistencia.py por el nombre real del archivo .py.)
+Crear un programa sencillo que permita llevar el control de asistencia de un grupo de personas mediante un menú interactivo.
 
-Ejemplo de uso
-text
-=======================
- REGISTRO DE ASISTENCIA
-=======================
-1. Marcar asistencia
-2. Ver asistentes
-3. Ver ausentes
-4. Buscar persona
-5. Ver resumen
-6. Salir
-Seleccione una opción: 1
-Ingrese el nombre: Juan
-¿Está presente? (si/no): si
-Asistencia registrada correctamente
-Estructura de datos
+---
 
-Cada persona se almacena en memoria como una sublista dentro de personas, y se refleja tal cual en asistencia.csv:
+## ⚙️ Funcionalidades
 
-python
-personas = [
-    ["Juan", "si"],
-    ["Ana", "no"],
-]
-persona[0] → nombre
-persona[1] → estado ("si" o "no")
-Archivo de datos
+El programa cuenta con las siguientes opciones:
 
-El programa crea/lee un archivo asistencia.csv en la misma carpeta del script. Cada fila representa una persona:
+1. **Marcar asistencia**
+   - Permite ingresar el nombre de una persona.
+   - Permite indicar si está presente (`si`) o ausente (`no`).
+   - Guarda la información en una lista.
 
-csv
-Juan,si
-Ana,no
-Posibles mejoras a futuro
-Exportar el resumen a un reporte (por ejemplo .txt o .pdf).
-Permitir eliminar un registro.
-Manejar múltiples eventos o fechas distintas en el mismo archivo.
+2. **Ver asistentes**
+   - Muestra las personas que tienen registrada la asistencia como `si`.
+
+3. **Ver ausentes**
+   - Muestra las personas que tienen registrada la asistencia como `no`.
+
+4. **Buscar persona**
+   - Permite buscar una persona por su nombre.
+   - Muestra su nombre y estado de asistencia.
+
+5. **Eliminar persona**
+   - Permite eliminar una persona de la lista de registros.
+
+6. **Ver total de personas**
+   - Muestra la cantidad total de personas registradas.
+
+7. **Salir**
+   - Finaliza el programa.
+
+---
+
+## 🧩 Explicación del código
+
+### 📦 Lista `personas`
+
+```python
+personas = []
