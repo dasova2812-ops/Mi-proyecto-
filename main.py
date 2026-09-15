@@ -63,7 +63,7 @@ def buscar_persona():
         print("Debe ingresar un nombre")
         return
 
-    for persona in personas:
+    for persona in personas :
         if persona[0].lower() == buscar:
             print("\nNombre:", persona[0])
             print("Estado:", persona[1])
